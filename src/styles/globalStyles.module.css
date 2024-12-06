@@ -1,0 +1,1827 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Nobile", sans-serif;
+    background-color: #fefefe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    max-width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    padding: 10px 10px;
+    display: flex;
+    background-color: transparent;
+    border-bottom: solid 2px #E3E3E3;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    width: 85%;
+    padding: 10px 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #fefefe;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.middleSpace {
+    flex: 1;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+}
+
+.tabs {
+    width: fit-content;
+}
+
+.tabs > li {
+    float: left;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.tabs > li:last-child {
+    margin-right: 30px;
+}
+
+a {
+    color: #42413F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.headerButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #DCCCAD;
+    border: solid 1px #42413F;
+    background-image: url("../assets/innerborder1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.buttonIcon {
+    position: absolute;
+    color: #42413F;
+    font-size: 22px;
+}
+
+.homeSection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/bg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 50px;
+}
+
+.homeContainer {
+    max-width: 1279px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.homeSectionLeft {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    padding-right: 10%;
+    color: #42413F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboveTittle {
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #42413F;
+}
+
+.homeTittle {
+    position: relative;
+    font-size: 50px;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.homeTabTittle {
+    font-size: 50px;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-left: 8rem;
+}
+
+.homeTittle::before {
+    content: '';
+    position: absolute;
+    top: 5.7rem;
+    left: 0px;
+    width: 6.5rem;
+    height: 3px;
+    background-color: #DCCCAD;
+    pointer-events: none; 
+}
+
+.underTittleText {
+    color: #968B82;
+    padding-top: 15px;
+}
+
+.underTittleCardText {
+    color: #968B82;
+}
+
+.buttonsContainer {
+    width: 100%;
+    display: inline-flex;
+    padding: 2rem 0;
+    gap: 20px;
+    align-items: center;
+    border-bottom:solid 2px #E3E3E3;
+}
+
+.squareButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #DCCCAD;
+    border: solid 1px #42413F;
+    color: #42413F;
+}
+
+.squareButton::before {
+    content: '';
+    position: absolute;
+    width: 162px;
+    height: 42px;
+    border: solid 1px #42413F;
+    pointer-events: none; 
+}
+
+.playButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.playButton {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fefefe;
+    background-image: url("../assets/playButton.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bottomSections {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.bottomSection {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    height: fit-content;
+    line-height: 1;
+}
+
+.bottomSection p {
+    margin: 0;
+}
+
+.bottomSection:not(:last-child) {
+    padding-right: 30px;
+    border-right: solid 2px #DCCCAD;
+}
+
+.journey {
+    margin: 0;
+    padding: 0;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #42413F;
+    font-size: 30px;
+}
+
+.journeySigns {
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #42413F;
+    margin: 0 10px 0 3px;
+    font-size: 18px;
+}
+
+.homeSectionRight {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.homeImage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-image: url("../assets/man1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+
+
+
+
+
+/* Estilos de la sección About */
+.aboutSection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.aboutSectionLeft {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    color: #42413F;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.aboutCard {
+    height: auto;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutCard.middle {
+    background-color: #FEFEFE;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.cardText {
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTittle {
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #42413F;
+    font-size: 20px;
+}
+
+.cardButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fefefe;
+    border: solid 1px #42413F;
+    background-image: url("../assets/innerborder1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.aboutSectionRight {
+    width: 60%;
+    height: 100%;
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutInfoContainer {
+    position: relative;
+    height: 80%;
+    width: 100%;
+}
+
+.aboutTittle {
+    font-size: 40px;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #42413F;
+}
+
+.aboutSecTittle {
+    position: relative;
+    font-size: 40px;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: #42413F;
+}
+
+.aboutSecTittle::before {
+    content: '';
+    position: absolute;
+    top: 3.7rem;
+    left: 0px;
+    width: 6.5rem;
+    height: 3px;
+    background-color: #DCCCAD;
+    pointer-events: none; 
+}
+
+.aboutProducts {
+    max-width: 100%;
+    height: 150px;
+    margin-top: 3rem;
+    background-color: #3A4F54;
+    padding: 2rem;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tableSection {
+    width: 50%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tableTittle {
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #fefefe;
+    font-size: 20px;
+}
+
+.squareAboutButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #3A4F54;
+    border: solid 1px #fefefe;
+    color: #fefefe;
+}
+
+.squareAboutButton::before {
+    content: '';
+    position: absolute;
+    width: 162px;
+    height: 42px;
+    border: solid 1px #fefefe;
+    pointer-events: none; 
+}
+
+.aboutRow {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #E3E3E3;
+}
+
+.aboutRow:first-child {
+    padding: 0 0 15px 0;
+}
+
+.aboutRow:last-child {
+    border: none;
+    padding: 15px 0 0 0;
+}
+
+.tableText {
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #fefefe;
+    margin: 0 10px 0 3px;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+/* Estilos seccion de servicios */
+.servicesSection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.servicesCardsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.servicesCard {
+    position: relative;
+    width: 270px;
+    height: 220px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fefefe;
+    border: solid 1px #42413F;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicesCardInfo {
+    position: relative;
+    width: 270px;
+    height: 220px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fefefe;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicesCard::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    border: solid 1px #42413F;
+    pointer-events: none; 
+    box-sizing: border-box;
+}
+
+.headerButton.service {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 1rem;
+}
+
+.serviceTittle {
+    font-size: 30px;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #42413F;
+}
+
+.serviceTittle::before {
+    content: '';
+    position: absolute;
+    bottom:3rem;
+    left: 2rem;
+    width: 6.5rem;
+    height: 3px;
+    background-color: #DCCCAD;
+    pointer-events: none; 
+}
+
+.cardServiceText {
+    width: 100%;
+    padding-right: 1rem;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.cardServiceText span:first-child {
+    margin-top: 0; /* Asegura que esté pegado arriba */
+}
+
+.cardServiceText span:last-child {
+    margin-top: auto;
+}
+
+.cardServiceText span:not(:first-child):not(:last-child) {
+    margin: auto 0;
+}
+
+.cardServiceText a {
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cardServiceText a > span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #42413F;
+}
+
+.cardServiceText a > span:hover {
+    color: blue;
+}
+
+.underTittleServiceText {
+    font-size: 13px;
+    color: #968B82;
+}
+
+
+
+
+
+
+
+
+/* Estilos seccion why choose */
+.chooseImage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-image: url("../assets/man2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.chooseInfoContainer {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listContainer {
+    max-width: 100%;
+    padding-bottom: 1rem;
+    border-bottom:solid 2px #E3E3E3;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.listSection {
+    width: 50%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #42413F;
+}
+
+.listSection ul {
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.listSection ul > li {
+    height: fit-content;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    color: #968B82;
+}
+
+.checkLeft {
+    color: #DCCCAD;
+    margin-right: 10px;
+}
+
+.checkRinght {
+    color: #42413F;
+    margin-right: 10px;
+}
+
+.chooseBottomSection {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 1rem;
+}
+
+.progressTittle {
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #42413F;
+    font-size: 18px;
+}
+
+.progress {
+    background-color: #E3E3E3;
+    border-radius: 10px;
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: visible;
+}
+
+.progressBar {
+    position: relative;
+    background-color: #DCCCAD;
+    border-radius: 6px;
+    height: 100%;
+}
+
+.progressBarLabel {
+    position: absolute;
+    top: -25px;
+    left: auto;
+    right: 0;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #42413F;
+    font-size: 14px;
+    margin: 0 10px;
+    white-space: nowrap;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+/* Estilos de las tarjetas a mitad de pagina */
+.cards {
+    height: 200px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerCards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.externalCardShadow {
+    position: relative;
+    width: 260px;
+    height: 200px;
+    padding: 2rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background-color: #fefefe;
+    border-top: solid 2px #42413F;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.externalCardShadow span:first-child {
+    margin-top: 0;
+}
+
+.externalCardShadow a span:last-child {
+    margin-top: auto;
+}
+
+.externalCardShadow span:not(:first-child):not(:last-child) {
+    margin: auto 0;
+}
+
+.externalCardShadow::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    border-top: solid 2px #42413F;
+    pointer-events: none; 
+    box-sizing: border-box;
+}
+
+.externalCard {
+    position: relative;
+    width: 260px;
+    height: 200px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fefefe;
+    border-top: solid 2px #DCCCAD;
+    display: flex;
+    flex-direction: column;
+}
+
+.externalCard span:first-child {
+    margin-top: 0;
+}
+
+.externalCard a span:last-child {
+    margin-top: auto;
+}
+
+.externalCard span:not(:first-child):not(:last-child) {
+    margin: auto 0;
+}
+
+.externalCardShadow a, .externalCard a {
+    cursor: pointer;
+}
+
+.externalCard::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    border-top: solid 2px #DCCCAD;
+    pointer-events: none; 
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos Best Projects */
+.bpCard {
+    position: relative;
+    width: 360px;
+    height: 312px;
+    margin-bottom: 2rem;
+    background-color: #fefefe;
+    border-bottom: solid 1px #E3E3E3;
+    display: flex;
+    flex-direction: column;
+}
+
+.bpCardSection {
+    position: relative;
+    width: 360px;
+    height: 312px;
+    margin-bottom: 2rem;
+    padding-top: 35px;
+    background-color: #fefefe;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.bpCardSection::before {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 6.5rem;
+    height: 3px;
+    background-color: #DCCCAD;
+    pointer-events: none; 
+}
+
+.bpCardSectionTittle {
+    font-size: 35px;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #42413F;
+}
+
+.bpCardSectionTittle:nth-of-type(3) {
+    padding-bottom: 25px;
+}
+
+.bpImage {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.bpImageBP {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    display: block;
+}
+
+.bpBottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.bpText {
+    display: flex;
+    flex-direction: column;
+}
+
+.underTittleBPCardText {
+    color: #968B82;
+    font-family: sans-serif;
+}
+
+.cardBP {
+    display: flex;
+    padding: 2px;
+}
+
+.headerButton.bp {
+    width: 65px;
+    height: 65px;
+}
+
+.headerButton.bp::before {
+    content: '';
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    border: solid 1px #42413F;
+    border-radius: 50%;
+    pointer-events: none; 
+}
+
+.bpCardInfo {
+    position: relative;
+    width: 330px;
+    height: 250px;
+    margin-bottom: 2rem;
+    padding: 50px 15px 15px 15px;
+    background-color: #3A4F54;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bpAboveTittle {
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #DCCCAD;
+}
+
+.bpTittle {
+    font-family: "Nobile", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #fefefe;
+}
+
+.bpUnderTittle {
+    color: #B0BCC4;
+    padding-top: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Estilos de la sección Footer */
+.footerSection {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 50px;
+}
+
+.topSection {
+    width: 100%;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:solid 3px #E3E3E3;
+}
+
+.rowFooter {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.input {
+    width: 400px;
+    height: 100%;
+    padding-left: 15px;
+    background-color: #fefefe;
+    border: solid 1px #3A4F54;
+    color: #3A4F54;
+}
+
+.footerBottomSection {
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:solid 3px #E3E3E3;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerColumn:last-child {
+    padding-right: 30px;
+}
+
+.footerButtonDark {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #42413F;
+    background-image: url("../assets/roundbutton2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footerButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #DCCCAD;
+    border: solid 1px #42413F;
+    background-image: url("../assets/innerborder1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footerTittle {
+    position: relative;
+    font-family: "Nobile", sans-serif;
+    font-weight: 500;
+    color: #42413F;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.footerTittle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #DCCCAD;
+}
+
+.footerText {
+    position: relative;
+    font-family: sans-serif;
+    color: #3A4F54;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+/* media querys */
+@media screen and (max-width: 720px) {
+    .homeSection {
+        height: 70vh;
+    }
+    .homeContainer {
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .rightSection {
+        display: none;
+    }
+    .homeSectionRight {
+        display: none;
+    }
+    .homeSectionLeft {
+        width: 100%;
+        height: fit-content;
+        padding-right: 0px;
+    }
+    .aboveTittle {
+        font-size: 12px;
+    }
+    .homeTittle {
+        font-size: 25px;
+    }
+    .homeTabTittle {
+        font-size: 25px;
+        margin-top: 0.5rem;
+        margin-left: 4rem;
+    }
+    .homeTittle::before {
+        top: 3rem;
+        width: 3rem;
+        height: 2px;
+    }
+    .underTittleCardText {
+        font-size: 14px;
+    }
+    .buttonsContainer {
+        justify-content: center;
+        border-bottom:solid 1px #E3E3E3;
+    }
+    .squareButton {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .squareButton::before {
+        width: 112px;
+        height: 32px;
+    }
+    .playButtonContainer span {
+        font-size: 12px;
+    }
+    .playButton {
+        width: 50px;
+        height: 50px;
+    }
+    .row {
+        gap: 10px;
+    }
+    .bottomSection {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 0.5rem;
+        height: fit-content;
+        line-height: 1;
+    }
+    .bottomSection p {
+        margin: 0;
+        font-size: 13.5px;
+    }
+    .bottomSection:not(:last-child) {
+        padding-right: 10px;
+    }
+    .journey {
+        font-family: "Nobile", sans-serif;
+        font-weight: 500;
+        color: #42413F;
+        font-size: 20px;
+    }
+    .journeySigns {
+        font-size: 17px;
+    }
+
+
+    .aboutSection {
+        display: flex;
+        flex-direction: column; 
+        height: auto; 
+        padding-top: 20px; 
+    }
+    .aboutSectionRight {
+        order: 1; 
+        min-width: 100%; 
+        padding-left: 0; 
+    }
+    .aboutSectionLeft {
+        order: 2; 
+        min-width: 100%; 
+        margin: 0;
+    }
+    .cardsContainer {
+        gap: 15px; 
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        margin: 1rem 0;
+        position: relative;
+    }
+    .aboutCard {
+        width: 90%; 
+        padding: 1.5rem; 
+        margin: 0 auto;
+        /* box-sizing: border-box; */
+    }
+    .cardText {
+        max-width: 100%; 
+        text-align: center; 
+    }
+    .aboutTittle, .aboutSecTittle {
+        font-size: 24px; 
+    }
+    .aboutSecTittle::before {
+        top: 2.5rem;
+        width: 5rem; 
+    }
+    .aboutProducts {
+        height: auto; 
+        margin-top: 1.5rem;
+        max-width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .squareAboutButton {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .squareAboutButton::before {
+        width: 112px;
+        height: 32px;
+    }
+    .tableSection {
+        padding: 0; 
+        width: 50%;
+    }
+    .tableTittle {
+        font-size: 14px; 
+    }
+    .tableText {
+        font-size: 12px; 
+    }
+    .cardTittle {
+        font-size: 17px;
+    }
+    .underTittleText {
+        color: #968B82;
+        font-size: 14px;
+    }
+
+
+    .servicesSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+    .servicesCardsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    .servicesCard, .servicesCardInfo {
+        max-width: 90%;
+        margin-bottom: 15px;
+        height: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    .headerButton.service {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    .serviceTittle {
+        position: relative;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .serviceTittle::before {
+        width: 5rem;
+        height: 2px;
+        left: 0;
+        bottom: -5rem;
+    }
+    .cardServiceText {
+        height: auto;
+        text-align: center;
+    }
+    .cardServiceText a > span {
+        font-size: 14px;
+    }
+    .progressTittle {
+       font-size: 17px;
+    }
+
+
+    .cards {
+        height: auto;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    .containerCards {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .externalCardShadow, .externalCard {
+        max-width: 90%;
+        height: auto;
+        padding: 1.5rem;
+        gap: 1rem;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+    .externalCardShadow {
+        border-top: solid 2px #42413F;
+    }
+    .externalCard {
+        border-top: solid 2px #DCCCAD;
+    }
+    .externalCardShadow span:first-child, .externalCard span:first-child {
+        margin-top: 0;
+    }
+    .externalCardShadow a span:last-child, .externalCard a span:last-child {
+        margin-top: auto;
+    }
+    .externalCardShadow span:not(:first-child):not(:last-child),
+    .externalCard span:not(:first-child):not(:last-child) {
+        margin: auto 0;
+    }
+    .externalCardShadow a, .externalCard a {
+        cursor: pointer;
+        text-align: center;
+    }
+    .externalCardShadow::before, .externalCard::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        box-sizing: border-box;
+    }
+
+
+    .headerButton.bp {
+        width: 50px;
+        height: 50px;
+    }
+    .headerButton.bp::before {
+        content: '';
+        position: absolute;
+        width: 57px;
+        height: 57px;
+        border: solid 1px #42413F;
+        border-radius: 50%;
+        pointer-events: none; 
+    }
+    .bpCardSection, .bpCard, .bpCardInfo {
+        margin: 0;
+        width: 90%;
+    }
+
+
+    .footerSection {
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .topSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+        margin: 40px 0;
+        box-sizing: border-box;
+    }
+
+    .bpText {
+        margin-top: 15px;
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rowFooter {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .input {
+        width: 100%;
+        height: 30px;
+        box-sizing: border-box;
+    }
+
+    .footerBottomSection {
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footerColumn {
+        margin-bottom: 20px;
+        padding-right: 0;
+    }
+
+    .footerColumn:nth-child(2) {
+        padding-right: 15px;
+    }
+
+    .footerButtonDark {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footerButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footerTittle {
+        font-size: 17px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footerText {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+    .homeSection {
+        height: 80vh;
+        width: 100%;
+    }
+    .homeContainer {
+        width: 85%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .rightSection {
+        display: block;
+    }
+    .rightSection button {
+        display: none;
+    }
+    .homeSectionRight {
+        display: flex;
+        width: 40%;
+        height: 100%;
+        align-items: center;
+        margin-left: 20px;
+    }
+    .homeSectionLeft {
+        width: 60%;
+        height: fit-content;
+        padding-right: 0px;
+    }
+    .aboveTittle {
+        font-size: 12px;
+    }
+    .homeTittle {
+        font-size: 25px;
+    }
+    .homeTabTittle {
+        font-size: 25px;
+        margin-top: 0.5rem;
+        margin-left: 4rem;
+    }
+    .homeTittle::before {
+        top: 3rem;
+        width: 3rem;
+        height: 2px;
+    }
+    .underTittleCardText {
+        font-size: 14px;
+    }
+    .buttonsContainer {
+        justify-content: center;
+        border-bottom:solid 1px #E3E3E3;
+    }
+    .squareButton {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .squareButton::before {
+        width: 112px;
+        height: 32px;
+    }
+    .playButtonContainer span {
+        font-size: 12px;
+    }
+    .playButton {
+        width: 50px;
+        height: 50px;
+    }
+    .row {
+        gap: 10px;
+    }
+    .bottomSection {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 0.5rem;
+        height: fit-content;
+        line-height: 1;
+    }
+    .bottomSection p {
+        margin: 0;
+        font-size: 13.5px;
+    }
+    .bottomSection:not(:last-child) {
+        padding-right: 10px;
+    }
+    .journey {
+        font-family: "Nobile", sans-serif;
+        font-weight: 500;
+        color: #42413F;
+        font-size: 20px;
+    }
+    .journeySigns {
+        font-size: 17px;
+    }
+
+    
+
+    .aboutSection {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+    }
+    .aboutSectionRight {
+        width: 60%;
+        height: fit-content;
+    }
+    .cardsContainer {
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        margin: 2rem 0;
+        position: relative;
+    }
+    .aboutCard {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    .cardText {
+        max-width: 100%;
+        text-align: start;
+        padding-right: 10px;
+    }
+    .aboutTittle, .aboutSecTittle {
+        font-size: 25px;
+    }
+    .aboutSecTittle::before {
+        top: 3rem;
+        width: 6rem;
+    }
+    .aboutProducts {
+        height: auto;
+        margin-top: 2rem;
+        max-width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .squareAboutButton {
+        width: 130px;
+        height: 45px;
+        font-size: 14px;
+    }
+    .squareAboutButton::before {
+        width: 122px;
+        height: 37px;
+    }
+    .tableSection {
+        padding: 1rem;
+        width: 60%;
+    }
+    .tableTittle {
+        font-size: 14px;
+    }
+    .tableText {
+        font-size: 14px;
+    }
+    .cardTittle {
+        font-size: 17px;
+    }
+    .underTittleText {
+        color: #968B82;
+        font-size: 16px;
+    }
+    .chooseImage {
+        width: 100%;
+        height: auto;
+    }
+    .servicesSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+    .servicesCardsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        width: 100%;
+    }
+    .servicesCard, .servicesCardInfo {
+        max-width: 48%;
+        margin-bottom: 20px;
+        height: auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
+    }
+    .headerButton.service {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto 12px 0;
+    }
+    .serviceTittle {
+        position: relative;
+        font-size: 26px;
+        margin: 12px 0;
+    }
+    .serviceTittle::before {
+        width: 6rem;
+        height: 2px;
+        left: 0;
+        bottom: -5rem;
+    }
+    .cardServiceText {
+        height: auto;
+        text-align: start;
+        gap: 10px;
+    }
+    .cardServiceText a > span {
+        font-size: 16px;
+    }
+
+
+    
+    .chooseImage {
+        min-width: 100%;
+        height: 655px;
+        box-sizing: border-box;
+    }
+    .progressTittle {
+        font-size: 17px;
+    }
+
+
+    .cards {
+        height: auto;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    .containerCards {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .externalCardShadow, .externalCard {
+        max-width: 90%;
+        height: auto;
+        padding: 1.5rem;
+        gap: 1rem;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+    .externalCardShadow {
+        border-top: solid 2px #42413F;
+    }
+    .externalCard {
+        border-top: solid 2px #DCCCAD;
+    }
+    .externalCardShadow span:first-child, .externalCard span:first-child {
+        margin-top: 0;
+    }
+    .externalCardShadow a span:last-child, .externalCard a span:last-child {
+        margin-top: auto;
+    }
+    .externalCardShadow span:not(:first-child):not(:last-child),
+    .externalCard span:not(:first-child):not(:last-child) {
+        margin: auto 0;
+    }
+    .externalCardShadow a, .externalCard a {
+        cursor: pointer;
+        text-align: center;
+    }
+    .externalCardShadow::before, .externalCard::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        box-sizing: border-box;
+    }
+
+
+
+    .footerSection {
+        height: auto;
+        padding-top: 40px;
+    }
+    .topSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+        margin: 40px 0;
+        box-sizing: border-box;
+    }
+    .bpText {
+        margin-top: 15px;
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rowFooter {
+        height: auto;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .input {
+        width: 100%;
+        height: 30px;
+        box-sizing: border-box;
+    }
+    .footerBottomSection {
+        padding-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    .footerTittle {
+        font-size: 18px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+    .footerText {
+        font-size: 14px;
+    }
+
+    .footerButtonDark, .footerButton {
+        width: 40px;
+        height: 40px;
+    }
+    
+}
