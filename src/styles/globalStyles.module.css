@@ -72,6 +72,13 @@ a {
     font-weight: 600;
 }
 
+.logoHeader {
+    max-height: 50px;
+    mix-blend-mode: multiply;
+    background-color: transparent;
+    filter: contrast(1);
+}
+
 .headerButton {
     position: relative;
     display: flex;
@@ -286,10 +293,13 @@ a {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    background-image: url("../assets/man1.png");
+    background-image: url("../assets/Berkely_carpintero_trabajando.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
+    mix-blend-mode: multiply;
+    background-color: transparent;
+    filter: contrast(1.1);
 }
 
 
@@ -636,7 +646,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    background-image: url("../assets/man2.png");
+    background-image: url("../assets/Berkely_carpintero_working_house.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -748,8 +758,8 @@ a {
 
 /* Estilos de las tarjetas a mitad de pagina */
 .cards {
-    height: 200px;
-    margin-top: 15px;
+    height: auto;
+    margin: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1023,6 +1033,13 @@ a {
     border-bottom:solid 3px #E3E3E3;
 }
 
+.logoFooter {
+    max-height: 80px;
+    mix-blend-mode: multiply;
+    background-color: transparent;
+    filter: contrast(1);
+}
+
 .rowFooter {
     height: 50px;
     display: flex;
@@ -1124,6 +1141,13 @@ a {
 @media screen and (max-width: 720px) {
     .homeSection {
         height: 70vh;
+    }
+    .header {
+        justify-content: center;
+        align-items: center;
+    }
+    .middleSpace {
+        display: none;
     }
     .homeContainer {
         width: 90%;

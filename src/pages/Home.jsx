@@ -88,25 +88,25 @@ export const Home = () => {
 
     const bestProjects = [
         {
-            image: "/bp1.png",
+            image: "/kitchen_furniture.jpg",
             tittle: "Kitchen Furniture",
             initPrice: 36,
             onClick: () => {},
         },
         {
-            image: "/bp2.png",
+            image: "/room_furniture.jpg",
             tittle: "House Furniture",
             initPrice: 48,
             onClick: () => {},
         },
         {
-            image: "/bp3.png",
+            image: "/crafted_furniture.jpg",
             tittle: "Crafted Furniture",
             initPrice: 62,
             onClick: () => {},
         },
         {
-            image: "/bp4.png",
+            image: "/bathroom_furniture.jpg",
             tittle: "Bathroom Furniture",
             initPrice: 76,
             onClick: () => {},
@@ -139,7 +139,7 @@ export const Home = () => {
         <div id='Home' className={ styles.homeSection }>
             <div className={`${styles.header} ${scrolled ? styles.scrolled : ""}`.trim()}>
                 <div>
-                    <img src=""  />
+                    <img src="/logo_header.png" className={styles.logoHeader} />
                 </div>
                 <div className={ styles.middleSpace }></div>
                 <div className={styles.rightSection}>
@@ -387,7 +387,7 @@ export const Home = () => {
         <div id='Footer' className={ styles.footerSection }>
             <div className={styles.homeContainer} style={{display: "flex", flexDirection: "column"}}>
                 <div className={styles.topSection}>
-                    <span style={{color: "#42413f"}}>Logo</span>
+                    <img src="/logo_footer.png" alt="Berkeley" className={styles.logoFooter}/>
                     <div className={styles.bpText}>
                         <span className={styles.cardTittle}>Subscribe Our Newsletter</span>
                         <div className={styles.rowFooter}>
